@@ -1,0 +1,109 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$polyvizor-primary: (
+  50 : #e5f1f0,
+  100 : #bfdcd9,
+  200 : #94c5c0,
+  300 : #69ada7,
+  400 : #489c94,
+  500 : #288a81,
+  600 : #248279,
+  700 : #1e776e,
+  800 : #186d64,
+  900 : #0f5a51,
+  A100 : #90fff0,
+  A200 : #5dffea,
+  A400 : #2affe3,
+  A700 : #11ffdf,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$polyvizor-accent: (
+  50 : #e7f9f7,
+  100 : #c4efec,
+  200 : #9de5df,
+  300 : #76dbd2,
+  400 : #58d3c8,
+  500 : #3bcbbe,
+  600 : #35c6b8,
+  700 : #2dbeaf,
+  800 : #26b8a7,
+  900 : #19ac99,
+  A100 : #e0fffb,
+  A200 : #adfff4,
+  A400 : #7affed,
+  A700 : #61ffea,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$polyvizor-warn: (
+  50 : #ffebeb,
+  100 : #ffcdcd,
+  200 : #ffabab,
+  300 : #ff8989,
+  400 : #ff7070,
+  500 : #ff5757,
+  600 : #ff4f4f,
+  700 : #ff4646,
+  800 : #ff3c3c,
+  900 : #ff2c2c,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffd8d8,
+  A700 : #ffbebe,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$my-app-primary: mat-palette($polyvizor-primary);
+$my-app-accent:  mat-palette($polyvizor-accent);
+$my-app-warn:  mat-palette($polyvizor-warn);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);

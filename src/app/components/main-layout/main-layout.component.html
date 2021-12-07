@@ -1,0 +1,16 @@
+<div class="main">
+  <h1>Выберите действие</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Действие</mat-label>
+    <mat-select>
+      <mat-option  *ngFor="let action of actions" [value]="action.value" (click)="setAction(action.value)">{{action.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>По каким данным получим результат:</mat-label>
+    <mat-select>
+      <mat-option  *ngFor="let action of data" [value]="action.value" (click)="setData(action.value)">{{action.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button routerLink="/result" mat-raised-button color="primary">Выполнить</button>
+</div>

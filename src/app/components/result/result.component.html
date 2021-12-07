@@ -1,0 +1,29 @@
+<div class="main">
+    <h2>Результат</h2>
+    <div class="title-div">
+      <h6 *ngIf="analize.value_operation !== 'klaster'" class="title">По данным:</h6>
+      <mat-label>{{title}}</mat-label>
+    </div>
+    <div *ngIf="analize.value_operation !== 'klaster'" class="title-div">
+      <h6  class="title">Операция:</h6>
+      <mat-label>{{action}}</mat-label>
+    </div>
+    <div *ngIf="analize.value_operation !== 'klaster'" class="title-div">
+      <h6 class="title">Результат:</h6>
+      <mat-label>{{result}}</mat-label>
+    </div>
+    <mat-label *ngIf="analize.value_operation === 'klaster'">{{SVC_prediction}}</mat-label>
+    <mat-label *ngIf="analize.value_operation === 'klaster'">{{KNN_prediction}}</mat-label>
+    <mat-label *ngIf="analize.value_operation !== 'klaster'">{{description}}</mat-label>
+    <h4 *ngIf="analize.value_operation === 'klaster'">{{description}}</h4>
+    <div *ngIf="analize.value_operation === 'klaster'" class="d-flex" style="flex-direction: column; align-items: flex-end;">
+      <mat-label *ngFor="let rep of matrix">{{rep}}</mat-label>
+    </div>
+    <h4 *ngIf="analize.value_operation === 'klaster'">{{description2}}</h4>
+    <div *ngIf="analize.value_operation === 'klaster'" class="d-flex" style="flex-direction: column; align-items: flex-end; margin-right: 120px;">
+      <mat-label *ngFor="let rep of report">{{rep}}</mat-label>
+    </div>
+    <div *ngIf="analize.value_operation !== 'klaster'" style="display: block; width: 98%; height: 400px">
+      <canvas id="myChart" style="width: 98%; height: 400px"></canvas>
+    </div>
+</div>

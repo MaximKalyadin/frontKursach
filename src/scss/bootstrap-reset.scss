@@ -1,0 +1,14 @@
+* {
+  &:active,
+  :focus {
+    outline: none !important;
+  }
+}
+
+label {
+  margin-bottom: 0;
+}
+
+.mat-stroked-button:not([disabled]) {
+  border-color: inherit !important;
+}

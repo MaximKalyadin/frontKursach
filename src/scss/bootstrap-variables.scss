@@ -1,0 +1,23 @@
+
+$grid-breakpoints: (
+  xs: 0,      // <  576 px
+  sm: 576px,  // >= 576 px
+  md: 768px,  // >= 768 px
+  lg: 992px,  // >= 992 px
+  xl: 1200px  // >= 1200 px
+);
+
+$theme-colors: (
+  "primary": #3BCBBE,
+  "secondary": #4eb3aa,
+  "success": #ff4136,
+  "info": #ff4136,
+  "warning": #ff4136,
+  "danger": #ff4136,
+  "light": #e9e9e9,
+  "dark": #288A81
+);
+
+$link-hover-decoration: none;    // remove underline from button links
+$link-color: #3f51b5;            // set link color based on the used material theme
+$link-hover-color: currentColor;
